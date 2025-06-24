@@ -1,0 +1,351 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+  engineType = "binary"
+}
+
+generator zod {
+  provider         = "zod-prisma-types"
+  output           = "../src/zod"
+  createInputTypes = false
+  addIncludeType   = false
+  addSelectType    = false
+}
+
+model User {
+  id                 String       @id
+  name               String
+  email              String
+  emailVerified      Boolean
+  image              String?
+  createdAt          DateTime
+  updatedAt          DateTime
+  username           String?
+  role               String?
+  banned             Boolean?
+  banReason          String?
+  banExpires         DateTime?
+  onboardingComplete Boolean      @default(false)
+  paymentsCustomerId String?
+  locale             String?
+  sessions           Session[]
+  accounts           Account[]
+  passkeys           Passkey[]
+  invitations        Invitation[]
+  purchases          Purchase[]
+  memberships        Member[]
+  aiChats            AiChat[]
+  templates          Template[]
+  manuals            Manual[]
+  templateRevisions  TemplateRevision[]
+  manualVersions     ManualVersion[]
+
+  @@unique([email])
+  @@unique([username])
+  @@map("user")
+}
+
+model Session {
+  id        String   @id
+  expiresAt DateTime
+  ipAddress String?
+  userAgent String?
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  impersonatedBy String?
+
+  activeOrganizationId String?
+
+  token     String
+  createdAt DateTime
+  updatedAt DateTime
+
+  @@unique([token])
+  @@map("session")
+}
+
+model Account {
+  id           String    @id
+  accountId    String
+  providerId   String
+  userId       String
+  user         User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  accessToken  String?
+  refreshToken String?
+  idToken      String?
+  expiresAt    DateTime?
+  password     String?
+
+  accessTokenExpiresAt  DateTime?
+  refreshTokenExpiresAt DateTime?
+  scope                 String?
+  createdAt             DateTime
+  updatedAt             DateTime
+
+  @@map("account")
+}
+
+model Verification {
+  id         String   @id
+  identifier String
+  value      String
+  expiresAt  DateTime
+
+  createdAt DateTime?
+  updatedAt DateTime?
+
+  @@map("verification")
+}
+
+model Passkey {
+  id           String    @id
+  name         String?
+  publicKey    String
+  userId       String
+  user         User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  credentialID String
+  counter      Int
+  deviceType   String
+  backedUp     Boolean
+  transports   String?
+  createdAt    DateTime?
+
+  @@map("passkey")
+}
+
+model Organization {
+  id                 String       @id
+  name               String
+  slug               String?
+  logo               String?
+  createdAt          DateTime
+  metadata           String?
+  paymentsCustomerId String?
+  members            Member[]
+  invitations        Invitation[]
+  purchases          Purchase[]
+  aiChats            AiChat[]
+
+  @@unique([slug])
+  @@map("organization")
+}
+
+model Member {
+  id             String       @id
+  organizationId String
+  organization   Organization @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+  userId         String
+  user           User         @relation(fields: [userId], references: [id], onDelete: Cascade)
+  role           String
+  createdAt      DateTime
+
+  @@unique([userId, organizationId])
+  @@map("member")
+}
+
+model Invitation {
+  id             String       @id
+  organizationId String
+  organization   Organization @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+  email          String
+  role           String?
+  status         String
+  expiresAt      DateTime
+  inviterId      String
+  user           User         @relation(fields: [inviterId], references: [id], onDelete: Cascade)
+
+  @@map("invitation")
+}
+
+enum PurchaseType {
+  SUBSCRIPTION
+  ONE_TIME
+}
+
+model Purchase {
+  id             String        @id @default(cuid())
+  organization   Organization? @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+  organizationId String?
+  user           User?         @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId         String?
+  type           PurchaseType
+  customerId     String
+  subscriptionId String?       @unique
+  productId      String
+  status         String?
+  createdAt      DateTime      @default(now())
+  updatedAt      DateTime      @updatedAt
+
+  @@index([subscriptionId])
+}
+
+model AiChat {
+  id             String        @id @default(cuid())
+  organizationId String?
+  organization   Organization? @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+  userId         String?
+  user           User?         @relation(fields: [userId], references: [id], onDelete: Cascade)
+  title          String?
+  messages       Json[]
+  createdAt      DateTime      @default(now())
+  updatedAt      DateTime      @updatedAt
+}
+
+model Template {
+  id            Int       @id @default(autoincrement())
+  name          String    @map("nome_template")
+  description   String?   @map("descrizione")
+  createdAt     DateTime  @default(now()) @map("data_creazione")
+  updatedAt     DateTime  @updatedAt @map("data_modifica")
+  isActive      Boolean   @default(true) @map("attivo")
+  userId        String    @map("created_by")
+  user          User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  logo_path     String?   @map("logo_path")
+  logo_footer   String?   @map("logo_footer")
+  color         String    @map("colore")
+  font_title    String    @map("font_titolo")
+  font_paragraph String   @map("font_paragrafo")
+  manuals       Manual[]
+  revisions     TemplateRevision[]
+  manualVersions ManualVersion[]
+
+  @@map("templates")
+}
+
+model TemplateRevision {
+  id            Int       @id @default(autoincrement())
+  templateId    Int       @map("template_id")
+  template      Template  @relation(fields: [templateId], references: [id], onDelete: Cascade)
+  userId        String    @map("user_id")
+  user          User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  name          String    @map("nome_template")
+  description   String?   @map("descrizione")
+  createdAt     DateTime  @default(now()) @map("data_creazione")
+  logo_path     String?   @map("logo_path")
+  logo_footer   String?   @map("logo_footer")
+  color         String    @map("colore")
+  font_title    String    @map("font_titolo")
+  font_paragraph String   @map("font_paragrafo")
+  version       Int       @map("versione")
+
+  @@map("template_revisions")
+}
+
+model Manual {
+  id             Int             @id @default(autoincrement())
+  userId         String          @map("user_id")
+  user           User            @relation(fields: [userId], references: [id], onDelete: Cascade)
+  templateId     Int?            @map("template_id")
+  template       Template?       @relation(fields: [templateId], references: [id], onDelete: SetNull)
+  contentIt      Json?           @map("contenuto_it")
+  contentFr      Json?           @map("contenuto_fr")
+  contentDe      Json?           @map("contenuto_de")
+  contentEn      Json?           @map("contenuto_en")
+  contentEs      Json?           @map("contenuto_es")
+  version        Float           @default(1.0) @map("versione")
+  name           String          @map("nome")
+  createdAt      DateTime        @default(now()) @map("data_creazione")
+  updatedAt      DateTime        @updatedAt @map("data_modifica")
+  pagesInput     Int?            @map("pagine_input")
+  pagesOutput    Int?            @map("pagine_output")
+  images         Json?           @map("immagini")
+  pdf            String?         @map("pdf")
+  docx           String?         @map("docx")
+  pdf_it         String?         @map("pdf_it")
+  pdf_fr         String?         @map("pdf_fr")
+  pdf_de         String?         @map("pdf_de")
+  pdf_en         String?         @map("pdf_en")
+  pdf_es         String?         @map("pdf_es")
+  docx_it        String?         @map("docx_it")
+  docx_fr        String?         @map("docx_fr")
+  docx_de        String?         @map("docx_de")
+  docx_en        String?         @map("docx_en")
+  docx_es        String?         @map("docx_es")
+  isActive       Boolean         @default(true) @map("attivo")
+  manualVersions ManualVersion[]
+
+  @@map("manuali")
+}
+
+model ManualVersion {
+  id             Int       @id @default(autoincrement())
+  manualId       Int       @map("manual_id")
+  manual         Manual    @relation(fields: [manualId], references: [id], onDelete: Cascade)
+  userId         String    @map("user_id")
+  user           User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  templateId     Int?      @map("template_id")
+  template       Template? @relation(fields: [templateId], references: [id], onDelete: SetNull)
+  contentIt      Json?     @map("contenuto_it")
+  contentFr      Json?     @map("contenuto_fr")
+  contentDe      Json?     @map("contenuto_de")
+  contentEn      Json?     @map("contenuto_en")
+  contentEs      Json?     @map("contenuto_es")
+  version        Float     @map("versione")
+  name           String    @map("nome")
+  createdAt      DateTime  @default(now()) @map("data_creazione")
+  pagesInput     Int?      @map("pagine_input")
+  pagesOutput    Int?      @map("pagine_output")
+  images         Json?     @map("immagini")
+  pdf            String?   @map("pdf")
+  docx           String?   @map("docx")
+  pdf_it         String?   @map("pdf_it")
+  pdf_fr         String?   @map("pdf_fr")
+  pdf_de         String?   @map("pdf_de")
+  pdf_en         String?   @map("pdf_en")
+  pdf_es         String?   @map("pdf_es")
+  docx_it        String?   @map("docx_it")
+  docx_fr        String?   @map("docx_fr")
+  docx_de        String?   @map("docx_de")
+  docx_en        String?   @map("docx_en")
+  docx_es        String?   @map("docx_es")
+
+  @@map("manual_versions")
+}
+
+model ManualInstruction {
+  id        Int      @id @default(autoincrement())
+  file_path String   @map("file_path")
+  prompt    String?  @map("prompt")
+  createdAt DateTime @default(now()) @map("data_creazione")
+  updatedAt DateTime @updatedAt @map("data_modifica")
+
+  @@map("manual_instructions")
+}
+
+model SectionsManual {
+  id        Int           @id @default(autoincrement())
+  name      String        @map("nome")
+  cards     SectionCard[]
+  createdAt DateTime      @default(now()) @map("created_at")
+  updatedAt DateTime      @updatedAt @map("updated_at")
+
+  @@map("sections_manual")
+}
+
+model SectionCard {
+  id          Int           @id @default(autoincrement())
+  sectionId   Int           @map("section_id")
+  section     SectionsManual @relation(fields: [sectionId], references: [id], onDelete: Cascade)
+  title       String        @map("titolo")
+  description String        @map("descrizione")
+  createdAt   DateTime      @default(now()) @map("created_at")
+  updatedAt   DateTime      @updatedAt @map("updated_at")
+
+  @@map("section_cards")
+}
+
+model Icone {
+  id          Int      @id @default(autoincrement())
+  nome        String   @map("nome")
+  descrizione String?  @map("descrizione")
+  urlicona    String   @map("url_icona")
+  createdAt   DateTime @default(now()) @map("data_creazione")
+  updatedAt   DateTime @updatedAt @map("data_modifica")
+
+  @@map("icone")
+}

@@ -1,0 +1,2991 @@
+
+> supastarter-nextjs@ dev /home/Sapienta-Agrieuro/DocPilot-ui-editor
+> dotenv -c -- turbo dev --concurrency 15
+
+turbo 2.3.3
+
+• Packages in scope: @repo/ai, @repo/api, @repo/auth, @repo/config, @repo/database, @repo/i18n, @repo/logs, @repo/mail, @repo/payments, @repo/scripts, @repo/storage, @repo/tailwind-config, @repo/tsconfig, @repo/utils, @repo/web
+• Running dev in 15 packages
+• Remote caching disabled
+@repo/database:generate: cache bypass, force executing 07d37983e5438c70
+@repo/database:generate: 
+@repo/database:generate: > @repo/database@0.0.0 generate /home/Sapienta-Agrieuro/DocPilot-ui-editor/packages/database
+@repo/database:generate: > prisma generate
+@repo/database:generate: 
+@repo/database:generate: Prisma schema loaded from prisma/schema.prisma
+@repo/database:generate: 
+@repo/database:generate: ✔ Generated Prisma Client (v6.2.1, engine=binary) to ./../../node_modules/.pnpm/@prisma+client@6.2.1_prisma@6.2.1/node_modules/@prisma/client in 262ms
+@repo/database:generate: 
+@repo/database:generate: ✔ Generated Zod Prisma Types to ./src/zod in 440ms
+@repo/database:generate: 
+@repo/database:generate: Start by importing your Prisma Client (See: https://pris.ly/d/importing-client)
+@repo/database:generate: 
+@repo/database:generate: Help us improve the Prisma ORM for everyone. Share your feedback in a short 2-min survey: https://pris.ly/orm/survey/release-5-22
+@repo/database:generate: 
+@repo/database:generate: ┌─────────────────────────────────────────────────────────┐
+@repo/database:generate: │  Update available 6.2.1 -> 6.10.1                       │
+@repo/database:generate: │  Run the following to update                            │
+@repo/database:generate: │    npm i --save-dev prisma@latest                       │
+@repo/database:generate: │    npm i @prisma/client@latest                          │
+@repo/database:generate: └─────────────────────────────────────────────────────────┘
+@repo/web:dev: cache bypass, force executing 0bacd78ee7588cc0
+@repo/web:dev: 
+@repo/web:dev: > @repo/web@0.0.0 dev /home/Sapienta-Agrieuro/DocPilot-ui-editor/apps/web
+@repo/web:dev: > next dev --turbo
+@repo/web:dev: 
+@repo/web:dev: Starting content-collections content-collections.ts
+@repo/web:dev: build started ...
+@repo/web:dev: ... finished build of 4 collections and 13 documents in 40ms
+@repo/web:dev: start watching ...
+@repo/web:dev:    ▲ Next.js 15.1.6 (Turbopack)
+@repo/web:dev:    - Local:        http://localhost:3000
+@repo/web:dev:    - Network:      http://10.0.0.4:3000
+@repo/web:dev:    - Experiments (use with caution):
+@repo/web:dev:      · turbo
+@repo/web:dev: 
+@repo/web:dev:  ✓ Starting...
+@repo/web:dev:  ⚠ Invalid next.config.ts options detected: 
+@repo/web:dev:  ⚠     Unrecognized key(s) in object: 'api'
+@repo/web:dev:  ⚠ See more info here: https://nextjs.org/docs/messages/invalid-next-config
+@repo/web:dev:  ✓ Compiled in 651ms
+@repo/web:dev:  ✓ Ready in 1836ms
+@repo/web:dev:  ○ Compiling /api/[[...rest]] ...
+@repo/web:dev:  ✓ Compiled /api/[[...rest]] in 4.3s
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 812ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 7405ms
+@repo/web:dev:  ○ Compiling /app/elaborati ...
+@repo/web:dev:  ✓ Compiled /app/elaborati in 9.3s
+@repo/web:dev:  GET /app/elaborati 200 in 10032ms
+@repo/web:dev:  ○ Compiling /api/manuals/[id] ...
+@repo/web:dev:  ✓ Compiled /api/manuals/[id] in 1185ms
+@repo/web:dev: ℹ Connessione ad Azure Storage inizializzata { accountName: 'agrieuro' }
+@repo/web:dev: ℹ Verifica container: { containerName: 'agrieuro-photo',
+@repo/web:dev:   exists: true,
+@repo/web:dev:   timestamp: '2025-06-23T12:46:28.113Z' }
+@repo/web:dev: ℹ Container agrieuro-photo verificato/creato con successo
+@repo/web:dev: ℹ Verifica container: { containerName: 'manuali', exists: true, timestamp: '2025-06-23T12:46:28.154Z' }
+@repo/web:dev: ℹ Container manuali verificato/creato con successo
+@repo/web:dev: ℹ Connessione ad Azure Storage inizializzata { accountName: 'agrieuro' }
+@repo/web:dev: ℹ Verifica container: { containerName: 'agrieuro-photo',
+@repo/web:dev:   exists: true,
+@repo/web:dev:   timestamp: '2025-06-23T12:46:29.501Z' }
+@repo/web:dev: ℹ Container agrieuro-photo verificato/creato con successo
+@repo/web:dev: ℹ Verifica container: { containerName: 'manuali', exists: true, timestamp: '2025-06-23T12:46:29.543Z' }
+@repo/web:dev: ℹ Container manuali verificato/creato con successo
+@repo/web:dev:  GET /api/manuals/63 200 in 3133ms
+@repo/web:dev:  GET /api/manuals/63 200 in 123ms
+@repo/web:dev: ℹ Inizio processo di eliminazione del manuale { manualName: 'pIPPO', manualId: 63 }
+@repo/web:dev: ℹ Inizio eliminazione cartella manuale: { originalName: 'pIPPO', sanitizedName: 'pippo', containerName: 'agrieuro-photo' }
+@repo/web:dev: ℹ Ricerca blob nella cartella: { prefix: 'pippo/' }
+@repo/web:dev: ℹ Blob trovati nella cartella: { count: 0, blobs: [], folderName: 'pippo' }
+@repo/web:dev: 
+@repo/web:dev:  WARN  Nessun blob trovato nella cartella { folderName: 'pippo', prefix: 'pippo/' }
+@repo/web:dev: 
+@repo/web:dev: ℹ Cartella delle immagini eliminata con successo { manualName: 'pIPPO', manualId: 63 }
+@repo/web:dev: ℹ Manuale eliminato con successo { manualName: 'pIPPO', manualId: 63 }
+@repo/web:dev:  DELETE /api/manuals/63 200 in 232ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: ℹ Connessione ad Azure Storage inizializzata { accountName: 'agrieuro' }
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 30ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 96ms
+@repo/web:dev:  GET /app/elaborati 200 in 108ms
+@repo/web:dev: ℹ Verifica container: { containerName: 'agrieuro-photo',
+@repo/web:dev:   exists: true,
+@repo/web:dev:   timestamp: '2025-06-23T12:46:31.123Z' }
+@repo/web:dev: ℹ Container agrieuro-photo verificato/creato con successo
+@repo/web:dev: ℹ Verifica container: { containerName: 'manuali', exists: true, timestamp: '2025-06-23T12:46:31.171Z' }
+@repo/web:dev: ℹ Container manuali verificato/creato con successo
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 41ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 103ms
+@repo/web:dev:  GET /app/elaborati 200 in 351ms
+@repo/web:dev:  ✓ Compiled /favicon.ico in 132ms
+@repo/web:dev:  GET /favicon.ico?favicon.b9464329.ico 200 in 183ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 32ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 98ms
+@repo/web:dev:  ○ Compiling /app/sezioni-manuale ...
+@repo/web:dev:  ✓ Compiled /app/sezioni-manuale in 817ms
+@repo/web:dev:  GET /app/sezioni-manuale 200 in 878ms
+@repo/web:dev:  ✓ Compiled /api/sections-manual in 132ms
+@repo/web:dev:  GET /api/sections-manual 200 in 221ms
+@repo/web:dev:  GET /api/sections-manual 200 in 49ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 29ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 96ms
+@repo/web:dev:  ○ Compiling /app/istruzioni-manuale ...
+@repo/web:dev:  ✓ Compiled /app/istruzioni-manuale in 721ms
+@repo/web:dev:  GET /app/istruzioni-manuale 200 in 783ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 29ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 60ms
+@repo/web:dev:  GET /app/istruzioni-manuale 200 in 39ms
+@repo/web:dev:  ✓ Compiled /api/manual-instructions/latest in 113ms
+@repo/web:dev:  GET /api/manual-instructions/latest 200 in 230ms
+@repo/web:dev:  GET /api/manual-instructions/latest 200 in 44ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 195ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 266ms
+@repo/web:dev:  ○ Compiling /app/template ...
+@repo/web:dev:  ✓ Compiled /app/template in 1134ms
+@repo/web:dev:  GET /app/template 200 in 1195ms
+@repo/web:dev:  ○ Compiling /api/templates ...
+@repo/web:dev:  ✓ Compiled /api/templates in 613ms
+@repo/web:dev: Session: {
+@repo/web:dev:   session: {
+@repo/web:dev:     id: 'rrYg3ADspfjfmfxz73BQMCTsRnnTZDmQ',
+@repo/web:dev:     expiresAt: 2025-07-23T08:25:17.892Z,
+@repo/web:dev:     token: 'ISUcnHwSqdisM0uxoJUmVENd0DcjoXZB',
+@repo/web:dev:     createdAt: 2025-06-21T07:24:18.689Z,
+@repo/web:dev:     updatedAt: 2025-06-21T07:24:18.689Z,
+@repo/web:dev:     ipAddress: '79.26.20.123',
+@repo/web:dev:     userAgent: 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36',
+@repo/web:dev:     userId: 'YHPB6ynvs8bAoIMejzm6n',
+@repo/web:dev:     impersonatedBy: null,
+@repo/web:dev:     activeOrganizationId: null
+@repo/web:dev:   },
+@repo/web:dev:   user: {
+@repo/web:dev:     id: 'YHPB6ynvs8bAoIMejzm6n',
+@repo/web:dev:     name: 'admin',
+@repo/web:dev:     email: 'leonardo.raffi@sapienta.ai',
+@repo/web:dev:     emailVerified: true,
+@repo/web:dev:     image: null,
+@repo/web:dev:     createdAt: 2025-06-17T08:20:08.364Z,
+@repo/web:dev:     updatedAt: 2025-06-17T08:20:08.364Z,
+@repo/web:dev:     username: null,
+@repo/web:dev:     role: 'admin',
+@repo/web:dev:     banned: null,
+@repo/web:dev:     banReason: null,
+@repo/web:dev:     banExpires: null,
+@repo/web:dev:     onboardingComplete: true,
+@repo/web:dev:     locale: null
+@repo/web:dev:   }
+@repo/web:dev: }
+@repo/web:dev: Fetching templates for user: YHPB6ynvs8bAoIMejzm6n
+@repo/web:dev: Templates found: 1
+@repo/web:dev:  GET /api/templates 200 in 800ms
+@repo/web:dev: Session: {
+@repo/web:dev:   session: {
+@repo/web:dev:     id: 'rrYg3ADspfjfmfxz73BQMCTsRnnTZDmQ',
+@repo/web:dev:     expiresAt: 2025-07-23T08:25:17.892Z,
+@repo/web:dev:     token: 'ISUcnHwSqdisM0uxoJUmVENd0DcjoXZB',
+@repo/web:dev:     createdAt: 2025-06-21T07:24:18.689Z,
+@repo/web:dev:     updatedAt: 2025-06-21T07:24:18.689Z,
+@repo/web:dev:     ipAddress: '79.26.20.123',
+@repo/web:dev:     userAgent: 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36',
+@repo/web:dev:     userId: 'YHPB6ynvs8bAoIMejzm6n',
+@repo/web:dev:     impersonatedBy: null,
+@repo/web:dev:     activeOrganizationId: null
+@repo/web:dev:   },
+@repo/web:dev:   user: {
+@repo/web:dev:     id: 'YHPB6ynvs8bAoIMejzm6n',
+@repo/web:dev:     name: 'admin',
+@repo/web:dev:     email: 'leonardo.raffi@sapienta.ai',
+@repo/web:dev:     emailVerified: true,
+@repo/web:dev:     image: null,
+@repo/web:dev:     createdAt: 2025-06-17T08:20:08.364Z,
+@repo/web:dev:     updatedAt: 2025-06-17T08:20:08.364Z,
+@repo/web:dev:     username: null,
+@repo/web:dev:     role: 'admin',
+@repo/web:dev:     banned: null,
+@repo/web:dev:     banReason: null,
+@repo/web:dev:     banExpires: null,
+@repo/web:dev:     onboardingComplete: true,
+@repo/web:dev:     locale: null
+@repo/web:dev:   }
+@repo/web:dev: }
+@repo/web:dev: Fetching templates for user: YHPB6ynvs8bAoIMejzm6n
+@repo/web:dev: Templates found: 1
+@repo/web:dev:  GET /api/templates 200 in 87ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 43ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 113ms
+@repo/web:dev:  GET /app/template 200 in 216ms
+@repo/web:dev: Session: {
+@repo/web:dev:   session: {
+@repo/web:dev:     id: 'rrYg3ADspfjfmfxz73BQMCTsRnnTZDmQ',
+@repo/web:dev:     expiresAt: 2025-07-23T08:25:17.892Z,
+@repo/web:dev:     token: 'ISUcnHwSqdisM0uxoJUmVENd0DcjoXZB',
+@repo/web:dev:     createdAt: 2025-06-21T07:24:18.689Z,
+@repo/web:dev:     updatedAt: 2025-06-21T07:24:18.689Z,
+@repo/web:dev:     ipAddress: '79.26.20.123',
+@repo/web:dev:     userAgent: 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36',
+@repo/web:dev:     userId: 'YHPB6ynvs8bAoIMejzm6n',
+@repo/web:dev:     impersonatedBy: null,
+@repo/web:dev:     activeOrganizationId: null
+@repo/web:dev:   },
+@repo/web:dev:   user: {
+@repo/web:dev:     id: 'YHPB6ynvs8bAoIMejzm6n',
+@repo/web:dev:     name: 'admin',
+@repo/web:dev:     email: 'leonardo.raffi@sapienta.ai',
+@repo/web:dev:     emailVerified: true,
+@repo/web:dev:     image: null,
+@repo/web:dev:     createdAt: 2025-06-17T08:20:08.364Z,
+@repo/web:dev:     updatedAt: 2025-06-17T08:20:08.364Z,
+@repo/web:dev:     username: null,
+@repo/web:dev:     role: 'admin',
+@repo/web:dev:     banned: null,
+@repo/web:dev:     banReason: null,
+@repo/web:dev:     banExpires: null,
+@repo/web:dev:     onboardingComplete: true,
+@repo/web:dev:     locale: null
+@repo/web:dev:   }
+@repo/web:dev: }
+@repo/web:dev: Fetching templates for user: YHPB6ynvs8bAoIMejzm6n
+@repo/web:dev: Templates found: 1
+@repo/web:dev:  GET /api/templates 200 in 93ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 3ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 71ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 3ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 38ms
+@repo/web:dev:  ○ Compiling /auth/login ...
+@repo/web:dev:  ✓ Compiled /auth/login in 876ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 1056ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 2ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 69ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 37ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 106ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 2ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 69ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 36ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 68ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 3ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 76ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 36ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 74ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 73ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 2ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 35ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 77ms
+@repo/web:dev:  GET /favicon.ico?favicon.b9464329.ico 200 in 34ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session 200 in 32ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 659ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 729ms
+@repo/web:dev:  GET /app/elaborati 200 in 119ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 30ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 99ms
+@repo/web:dev:  GET /app/elaborati 200 in 118ms
+@repo/web:dev:  GET /favicon.ico?favicon.b9464329.ico 200 in 33ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 45ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 114ms
+@repo/web:dev:  GET /app/elaborati 200 in 109ms
+@repo/web:dev:  GET /favicon.ico?favicon.b9464329.ico 200 in 43ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 31ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 104ms
+@repo/web:dev:  GET /app/elaborati 200 in 97ms
+@repo/web:dev:  GET /favicon.ico?favicon.b9464329.ico 200 in 36ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 64ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 43ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 676ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 2ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 72ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 44ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 71ms
+@repo/web:dev:  GET /favicon.ico?favicon.b9464329.ico 200 in 51ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 2ms
+@repo/web:dev:  GET /api/auth/get-session 200 in 50ms
+@repo/web:dev: <-- POST /api/auth/sign-in/email
+@repo/web:dev: --> POST /api/auth/sign-in/email [32m200[0m 3s
+@repo/web:dev:  POST /api/auth/sign-in/email 200 in 3080ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 42ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 104ms
+@repo/web:dev:  ○ Compiling /app ...
+@repo/web:dev:  ✓ Compiled /app in 1376ms
+@repo/web:dev:  GET /app 200 in 2098ms
+@repo/web:dev:  ✓ Compiled /api/manuali/grafico in 119ms
+@repo/web:dev:  GET /api/manuali/grafico 200 in 315ms
+@repo/web:dev:  GET /api/manuali/grafico 200 in 70ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 29ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 100ms
+@repo/web:dev:  ○ Compiling /app/manual ...
+@repo/web:dev:  ✓ Compiled /app/manual in 1020ms
+@repo/web:dev:  GET /app/manual 200 in 1104ms
+@repo/web:dev:  GET /api/sections-manual 200 in 69ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 33ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 102ms
+@repo/web:dev:  GET /app/elaborati 200 in 746ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 30ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 98ms
+@repo/web:dev:  GET /app/template 200 in 655ms
+@repo/web:dev: Session: {
+@repo/web:dev:   session: {
+@repo/web:dev:     id: 'Ik79cczjsOlkvQBJp1i4u6qa1Hf843Mg',
+@repo/web:dev:     expiresAt: 2025-07-23T13:35:45.758Z,
+@repo/web:dev:     token: 'N2e4ID4JKFkBCD2rtct0E1BOxZohoH4h',
+@repo/web:dev:     createdAt: 2025-06-23T13:35:45.758Z,
+@repo/web:dev:     updatedAt: 2025-06-23T13:35:45.758Z,
+@repo/web:dev:     ipAddress: '185.5.245.122',
+@repo/web:dev:     userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36 Edg/137.0.0.0',
+@repo/web:dev:     userId: 'uDGN6_vCeekmH3QQ995Fl',
+@repo/web:dev:     impersonatedBy: null,
+@repo/web:dev:     activeOrganizationId: null
+@repo/web:dev:   },
+@repo/web:dev:   user: {
+@repo/web:dev:     id: 'uDGN6_vCeekmH3QQ995Fl',
+@repo/web:dev:     name: 'Emanuele',
+@repo/web:dev:     email: 'emanuele.cipriano@agrieuro.com',
+@repo/web:dev:     emailVerified: true,
+@repo/web:dev:     image: null,
+@repo/web:dev:     createdAt: 2025-06-23T12:27:06.161Z,
+@repo/web:dev:     updatedAt: 2025-06-23T12:27:06.161Z,
+@repo/web:dev:     username: null,
+@repo/web:dev:     role: 'admin',
+@repo/web:dev:     banned: null,
+@repo/web:dev:     banReason: null,
+@repo/web:dev:     banExpires: null,
+@repo/web:dev:     onboardingComplete: true,
+@repo/web:dev:     locale: null
+@repo/web:dev:   }
+@repo/web:dev: }
+@repo/web:dev: Fetching templates for user: uDGN6_vCeekmH3QQ995Fl
+@repo/web:dev: Templates found: 1
+@repo/web:dev:  GET /api/templates 200 in 141ms
+@repo/web:dev: Session: {
+@repo/web:dev:   session: {
+@repo/web:dev:     id: 'Ik79cczjsOlkvQBJp1i4u6qa1Hf843Mg',
+@repo/web:dev:     expiresAt: 2025-07-23T13:35:45.758Z,
+@repo/web:dev:     token: 'N2e4ID4JKFkBCD2rtct0E1BOxZohoH4h',
+@repo/web:dev:     createdAt: 2025-06-23T13:35:45.758Z,
+@repo/web:dev:     updatedAt: 2025-06-23T13:35:45.758Z,
+@repo/web:dev:     ipAddress: '185.5.245.122',
+@repo/web:dev:     userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36 Edg/137.0.0.0',
+@repo/web:dev:     userId: 'uDGN6_vCeekmH3QQ995Fl',
+@repo/web:dev:     impersonatedBy: null,
+@repo/web:dev:     activeOrganizationId: null
+@repo/web:dev:   },
+@repo/web:dev:   user: {
+@repo/web:dev:     id: 'uDGN6_vCeekmH3QQ995Fl',
+@repo/web:dev:     name: 'Emanuele',
+@repo/web:dev:     email: 'emanuele.cipriano@agrieuro.com',
+@repo/web:dev:     emailVerified: true,
+@repo/web:dev:     image: null,
+@repo/web:dev:     createdAt: 2025-06-23T12:27:06.161Z,
+@repo/web:dev:     updatedAt: 2025-06-23T12:27:06.161Z,
+@repo/web:dev:     username: null,
+@repo/web:dev:     role: 'admin',
+@repo/web:dev:     banned: null,
+@repo/web:dev:     banReason: null,
+@repo/web:dev:     banExpires: null,
+@repo/web:dev:     onboardingComplete: true,
+@repo/web:dev:     locale: null
+@repo/web:dev:   }
+@repo/web:dev: }
+@repo/web:dev: Fetching templates for user: uDGN6_vCeekmH3QQ995Fl
+@repo/web:dev: Templates found: 1
+@repo/web:dev:  GET /api/templates 200 in 88ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 29ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 101ms
+@repo/web:dev:  GET /app/elaborati 200 in 91ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 2ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 79ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 102ms
+@repo/web:dev:  GET /favicon.ico?favicon.b9464329.ico 200 in 40ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 2ms
+@repo/web:dev:  GET /api/auth/get-session 200 in 49ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 662ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 737ms
+@repo/web:dev:  GET /app/elaborati 200 in 122ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 29ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 101ms
+@repo/web:dev:  GET /app/elaborati 200 in 307ms
+@repo/web:dev:  GET /favicon.ico?favicon.b9464329.ico 200 in 46ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 705ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 782ms
+@repo/web:dev:  GET /app/elaborati 200 in 152ms
+@repo/web:dev:  GET /favicon.ico?favicon.b9464329.ico 200 in 56ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 36ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 110ms
+@repo/web:dev:  GET /app/manual 200 in 61ms
+@repo/web:dev:  GET /api/sections-manual 200 in 80ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 37ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 114ms
+@repo/web:dev:  GET /app/elaborati 200 in 104ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 35ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 78ms
+@repo/web:dev:  GET /app/elaborati 200 in 122ms
+@repo/web:dev:  GET /favicon.ico?favicon.b9464329.ico 200 in 38ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 36ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 108ms
+@repo/web:dev:  GET /app/elaborati 200 in 120ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 652ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 732ms
+@repo/web:dev:  GET /app/elaborati 200 in 150ms
+@repo/web:dev:  GET /favicon.ico?favicon.b9464329.ico 200 in 48ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 30ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 104ms
+@repo/web:dev:  GET /app 200 in 82ms
+@repo/web:dev:  GET /api/manuali/grafico 200 in 135ms
+@repo/web:dev:  GET /api/manuali/grafico 200 in 68ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 43ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 121ms
+@repo/web:dev:  GET /app 200 in 422ms
+@repo/web:dev:  GET /favicon.ico?favicon.b9464329.ico 200 in 79ms
+@repo/web:dev:  GET /api/manuali/grafico 200 in 113ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 3ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 90ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 51ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 89ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 466ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 544ms
+@repo/web:dev:  GET /app/elaborati 200 in 141ms
+@repo/web:dev:  GET /favicon.ico?favicon.b9464329.ico 200 in 49ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 657ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 737ms
+@repo/web:dev:  GET /app/elaborati 200 in 149ms
+@repo/web:dev:  GET /favicon.ico?favicon.b9464329.ico 200 in 52ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 31ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 105ms
+@repo/web:dev:  GET /app/template 200 in 67ms
+@repo/web:dev: Session: {
+@repo/web:dev:   session: {
+@repo/web:dev:     id: 'rrYg3ADspfjfmfxz73BQMCTsRnnTZDmQ',
+@repo/web:dev:     expiresAt: 2025-07-23T08:25:17.892Z,
+@repo/web:dev:     token: 'ISUcnHwSqdisM0uxoJUmVENd0DcjoXZB',
+@repo/web:dev:     createdAt: 2025-06-21T07:24:18.689Z,
+@repo/web:dev:     updatedAt: 2025-06-21T07:24:18.689Z,
+@repo/web:dev:     ipAddress: '79.26.20.123',
+@repo/web:dev:     userAgent: 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36',
+@repo/web:dev:     userId: 'YHPB6ynvs8bAoIMejzm6n',
+@repo/web:dev:     impersonatedBy: null,
+@repo/web:dev:     activeOrganizationId: null
+@repo/web:dev:   },
+@repo/web:dev:   user: {
+@repo/web:dev:     id: 'YHPB6ynvs8bAoIMejzm6n',
+@repo/web:dev:     name: 'admin',
+@repo/web:dev:     email: 'leonardo.raffi@sapienta.ai',
+@repo/web:dev:     emailVerified: true,
+@repo/web:dev:     image: null,
+@repo/web:dev:     createdAt: 2025-06-17T08:20:08.364Z,
+@repo/web:dev:     updatedAt: 2025-06-17T08:20:08.364Z,
+@repo/web:dev:     username: null,
+@repo/web:dev:     role: 'admin',
+@repo/web:dev:     banned: null,
+@repo/web:dev:     banReason: null,
+@repo/web:dev:     banExpires: null,
+@repo/web:dev:     onboardingComplete: true,
+@repo/web:dev:     locale: null
+@repo/web:dev:   }
+@repo/web:dev: }
+@repo/web:dev: Fetching templates for user: YHPB6ynvs8bAoIMejzm6n
+@repo/web:dev: Templates found: 1
+@repo/web:dev:  GET /api/templates 200 in 142ms
+@repo/web:dev: Session: {
+@repo/web:dev:   session: {
+@repo/web:dev:     id: 'rrYg3ADspfjfmfxz73BQMCTsRnnTZDmQ',
+@repo/web:dev:     expiresAt: 2025-07-23T08:25:17.892Z,
+@repo/web:dev:     token: 'ISUcnHwSqdisM0uxoJUmVENd0DcjoXZB',
+@repo/web:dev:     createdAt: 2025-06-21T07:24:18.689Z,
+@repo/web:dev:     updatedAt: 2025-06-21T07:24:18.689Z,
+@repo/web:dev:     ipAddress: '79.26.20.123',
+@repo/web:dev:     userAgent: 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36',
+@repo/web:dev:     userId: 'YHPB6ynvs8bAoIMejzm6n',
+@repo/web:dev:     impersonatedBy: null,
+@repo/web:dev:     activeOrganizationId: null
+@repo/web:dev:   },
+@repo/web:dev:   user: {
+@repo/web:dev:     id: 'YHPB6ynvs8bAoIMejzm6n',
+@repo/web:dev:     name: 'admin',
+@repo/web:dev:     email: 'leonardo.raffi@sapienta.ai',
+@repo/web:dev:     emailVerified: true,
+@repo/web:dev:     image: null,
+@repo/web:dev:     createdAt: 2025-06-17T08:20:08.364Z,
+@repo/web:dev:     updatedAt: 2025-06-17T08:20:08.364Z,
+@repo/web:dev:     username: null,
+@repo/web:dev:     role: 'admin',
+@repo/web:dev:     banned: null,
+@repo/web:dev:     banReason: null,
+@repo/web:dev:     banExpires: null,
+@repo/web:dev:     onboardingComplete: true,
+@repo/web:dev:     locale: null
+@repo/web:dev:   }
+@repo/web:dev: }
+@repo/web:dev: Fetching templates for user: YHPB6ynvs8bAoIMejzm6n
+@repo/web:dev: Templates found: 1
+@repo/web:dev:  GET /api/templates 200 in 96ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 33ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 112ms
+@repo/web:dev:  GET /app/template 200 in 365ms
+@repo/web:dev:  GET /favicon.ico?favicon.b9464329.ico 200 in 66ms
+@repo/web:dev: Session: {
+@repo/web:dev:   session: {
+@repo/web:dev:     id: 'rrYg3ADspfjfmfxz73BQMCTsRnnTZDmQ',
+@repo/web:dev:     expiresAt: 2025-07-23T08:25:17.892Z,
+@repo/web:dev:     token: 'ISUcnHwSqdisM0uxoJUmVENd0DcjoXZB',
+@repo/web:dev:     createdAt: 2025-06-21T07:24:18.689Z,
+@repo/web:dev:     updatedAt: 2025-06-21T07:24:18.689Z,
+@repo/web:dev:     ipAddress: '79.26.20.123',
+@repo/web:dev:     userAgent: 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36',
+@repo/web:dev:     userId: 'YHPB6ynvs8bAoIMejzm6n',
+@repo/web:dev:     impersonatedBy: null,
+@repo/web:dev:     activeOrganizationId: null
+@repo/web:dev:   },
+@repo/web:dev:   user: {
+@repo/web:dev:     id: 'YHPB6ynvs8bAoIMejzm6n',
+@repo/web:dev:     name: 'admin',
+@repo/web:dev:     email: 'leonardo.raffi@sapienta.ai',
+@repo/web:dev:     emailVerified: true,
+@repo/web:dev:     image: null,
+@repo/web:dev:     createdAt: 2025-06-17T08:20:08.364Z,
+@repo/web:dev:     updatedAt: 2025-06-17T08:20:08.364Z,
+@repo/web:dev:     username: null,
+@repo/web:dev:     role: 'admin',
+@repo/web:dev:     banned: null,
+@repo/web:dev:     banReason: null,
+@repo/web:dev:     banExpires: null,
+@repo/web:dev:     onboardingComplete: true,
+@repo/web:dev:     locale: null
+@repo/web:dev:   }
+@repo/web:dev: }
+@repo/web:dev: Fetching templates for user: YHPB6ynvs8bAoIMejzm6n
+@repo/web:dev: Templates found: 1
+@repo/web:dev:  GET /api/templates 200 in 129ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 145ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 221ms
+@repo/web:dev:  GET /app/template 200 in 117ms
+@repo/web:dev:  GET /favicon.ico?favicon.b9464329.ico 200 in 73ms
+@repo/web:dev: Session: {
+@repo/web:dev:   session: {
+@repo/web:dev:     id: 'rrYg3ADspfjfmfxz73BQMCTsRnnTZDmQ',
+@repo/web:dev:     expiresAt: 2025-07-23T08:25:17.892Z,
+@repo/web:dev:     token: 'ISUcnHwSqdisM0uxoJUmVENd0DcjoXZB',
+@repo/web:dev:     createdAt: 2025-06-21T07:24:18.689Z,
+@repo/web:dev:     updatedAt: 2025-06-21T07:24:18.689Z,
+@repo/web:dev:     ipAddress: '79.26.20.123',
+@repo/web:dev:     userAgent: 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36',
+@repo/web:dev:     userId: 'YHPB6ynvs8bAoIMejzm6n',
+@repo/web:dev:     impersonatedBy: null,
+@repo/web:dev:     activeOrganizationId: null
+@repo/web:dev:   },
+@repo/web:dev:   user: {
+@repo/web:dev:     id: 'YHPB6ynvs8bAoIMejzm6n',
+@repo/web:dev:     name: 'admin',
+@repo/web:dev:     email: 'leonardo.raffi@sapienta.ai',
+@repo/web:dev:     emailVerified: true,
+@repo/web:dev:     image: null,
+@repo/web:dev:     createdAt: 2025-06-17T08:20:08.364Z,
+@repo/web:dev:     updatedAt: 2025-06-17T08:20:08.364Z,
+@repo/web:dev:     username: null,
+@repo/web:dev:     role: 'admin',
+@repo/web:dev:     banned: null,
+@repo/web:dev:     banReason: null,
+@repo/web:dev:     banExpires: null,
+@repo/web:dev:     onboardingComplete: true,
+@repo/web:dev:     locale: null
+@repo/web:dev:   }
+@repo/web:dev: }
+@repo/web:dev: Fetching templates for user: YHPB6ynvs8bAoIMejzm6n
+@repo/web:dev: Templates found: 1
+@repo/web:dev:  GET /api/templates 200 in 153ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 43ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 119ms
+@repo/web:dev:  GET /app/elaborati 200 in 109ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 32ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 104ms
+@repo/web:dev:  GET /app/elaborati 200 in 113ms
+@repo/web:dev:  GET /favicon.ico?favicon.b9464329.ico 200 in 51ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 669ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 745ms
+@repo/web:dev:  GET /app/elaborati 200 in 145ms
+@repo/web:dev:  GET /favicon.ico?favicon.b9464329.ico 200 in 42ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 612ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 688ms
+@repo/web:dev:  GET /app/elaborati 200 in 129ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 36ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 76ms
+@repo/web:dev:  GET /app/elaborati 200 in 105ms
+@repo/web:dev:  GET /favicon.ico?favicon.b9464329.ico 200 in 43ms
+@repo/web:dev:  GET /favicon.ico?favicon.b9464329.ico 200 in 47ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 36ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 108ms
+@repo/web:dev:  GET /app/elaborati 200 in 119ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 2ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 79ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 93ms
+@repo/web:dev:  GET /favicon.ico?favicon.b9464329.ico 200 in 46ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session 200 in 48ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 887ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 966ms
+@repo/web:dev:  GET /app/elaborati 200 in 161ms
+@repo/web:dev:  GET /favicon.ico?favicon.b9464329.ico 200 in 44ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 121ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 195ms
+@repo/web:dev:  ○ Compiling /app/icons ...
+@repo/web:dev:  ✓ Compiled /app/icons in 829ms
+@repo/web:dev:  GET /app/icons 200 in 896ms
+@repo/web:dev:  ○ Compiling /api/icons ...
+@repo/web:dev:  ✓ Compiled /api/icons in 574ms
+@repo/web:dev:  GET /api/icons 200 in 682ms
+@repo/web:dev:  GET /api/icons 200 in 82ms
+@repo/web:dev: <-- GET /api/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+@repo/web:dev: --> GET /api/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php [33m404[0m 1ms
+@repo/web:dev:  GET /api/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php 404 in 75ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 667ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 754ms
+@repo/web:dev:  GET /app/icons 200 in 121ms
+@repo/web:dev:  GET /favicon.ico?favicon.b9464329.ico 200 in 45ms
+@repo/web:dev:  GET /api/icons 200 in 116ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 2ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 76ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 51ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 102ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 2ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 45ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 59ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 81ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 576ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 656ms
+@repo/web:dev:  GET /app/icons 200 in 117ms
+@repo/web:dev:  GET /api/icons 200 in 121ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 42ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 117ms
+@repo/web:dev:  GET /app/manual 200 in 81ms
+@repo/web:dev:  GET /api/sections-manual 200 in 75ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 31ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 69ms
+@repo/web:dev:  GET /app 200 in 88ms
+@repo/web:dev:  GET /api/manuali/grafico 200 in 125ms
+@repo/web:dev:  GET /api/manuali/grafico 200 in 67ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 165ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 242ms
+@repo/web:dev:  GET /app 200 in 118ms
+@repo/web:dev:  GET /favicon.ico?favicon.b9464329.ico 200 in 77ms
+@repo/web:dev:  GET /api/manuali/grafico 200 in 133ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 79ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 42ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 82ms
+@repo/web:dev:  GET /favicon.ico?favicon.b9464329.ico 200 in 47ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session 200 in 42ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 2ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 75ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 74ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 84ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 2ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 76ms
+@repo/web:dev:  GET /favicon.ico 200 in 43ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 2ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 76ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 2ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 45ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 85ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 45ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 45ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 75ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 44ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 2ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 53ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 158ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 72ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 42ms
+@repo/web:dev:  POST /auth/login?redirectTo=%2Fapp 200 in 135ms
+@repo/web:dev:  GET /favicon.ico 200 in 43ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 2ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 76ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 40ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 82ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 2ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 77ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 72ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 2ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 72ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 44ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 76ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 3ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 79ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 2ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 44ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 77ms
+@repo/web:dev:  GET /favicon.ico 200 in 43ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 73ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 43ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 90ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 2ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 78ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 2ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 43ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 72ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 70ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 2ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 38ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 72ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 74ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 70ms
+@repo/web:dev:  GET /auth/login 200 in 72ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev:  GET /favicon.ico?favicon.b9464329.ico 200 in 40ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 2ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 71ms
+@repo/web:dev:  GET /favicon.ico 200 in 38ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 2ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 72ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 41ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 74ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 72ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 40ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 80ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 2ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 83ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 45ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 78ms
+@repo/web:dev: <-- GET /api/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+@repo/web:dev: --> GET /api/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php [33m404[0m 0ms
+@repo/web:dev:  GET /api/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php 404 in 73ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 77ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 2ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 94ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 2ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 75ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 41ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 82ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 2ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 45ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 2ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 42ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 76ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 41ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 40ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 87ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 2ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 69ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 2ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 43ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 79ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 41ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 43ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 77ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 40ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 38ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 79ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 2ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 72ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 46ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 78ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 48ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 42ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 77ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 2ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 42ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 41ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 83ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 68ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 2ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 43ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 76ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 2ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 38ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 44ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 76ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 39ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 2ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 45ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 76ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 2ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 71ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 44ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 79ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 2ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 39ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 2ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 45ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 75ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 42ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 2ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 44ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 75ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 70ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 2ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 41ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 74ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 40ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 39ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 71ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 37ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 44ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 79ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 2ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 68ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 2ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 41ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 78ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 39ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 43ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 75ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 2ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 43ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 42ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 73ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 71ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 39ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 69ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 2ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 37ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 38ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 67ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 38ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 40ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 67ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 70ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 43ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 76ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 42ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 43ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 78ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 2ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 42ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 42ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 77ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 67ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 41ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 74ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 39ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 41ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 72ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 36ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 39ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 69ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 66ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 42ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 77ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 39ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 37ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 67ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 37ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 40ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 73ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 2ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 66ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 37ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 67ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 37ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 41ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 69ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 40ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 40ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 73ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 67ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 2ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 39ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 68ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 2ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 38ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 2ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 39ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 67ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 36ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 43ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 70ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 71ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 42ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 72ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 40ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 43ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 74ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 39ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 43ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 74ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 68ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 39ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 70ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 42ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 42ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 73ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 40ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 2ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 41ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 74ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 70ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 51ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 67ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 36ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 38ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 70ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 2ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 44ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 40ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 74ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 69ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 42ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 70ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 39ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 2ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 51ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 76ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 2ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 40ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 44ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 69ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 69ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 43ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 76ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 40ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 41ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 72ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 40ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 2ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 40ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 71ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 69ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 41ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 72ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 40ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 2ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 41ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 71ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 39ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 41ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 77ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 2ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 67ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 2ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 39ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 84ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 39ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 40ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 73ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 39ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 42ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 73ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 66ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 2ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 41ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 77ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 40ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 42ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 74ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 42ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 43ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 75ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 70ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 39ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 71ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 36ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 39ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 80ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 2ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 44ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 49ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 67ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 68ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 39ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 72ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 37ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 2ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 41ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 77ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 40ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 42ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 70ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 2ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 66ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 42ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 71ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 2ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 36ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 39ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 71ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 40ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 2ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 41ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 76ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 67ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 41ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 72ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 39ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 40ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 66ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 40ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 43ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 71ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 2ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 73ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 43ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 72ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 2ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 41ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 40ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 72ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 2ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 38ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 39ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 79ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 70ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 43ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 73ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 2ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 49ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 40ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 72ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 38ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 38ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 66ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 66ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 41ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 71ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 36ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 40ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 76ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 38ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 41ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 72ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 67ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 40ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 72ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 2ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 38ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 38ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 69ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 38ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 40ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 74ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 68ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 42ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 72ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 41ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 42ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 70ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 39ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 42ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 84ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 66ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 41ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 72ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 2ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 38ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 39ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 68ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 38ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 40ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 71ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 66ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 40ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 67ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 36ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 38ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 71ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 38ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 42ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 69ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 66ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 39ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 67ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 2ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 36ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 38ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 67ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 36ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 38ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 67ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 67ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 39ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 153ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 2ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 39ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 36ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 65ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 35ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 35ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 68ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 2ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 69ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 35ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 69ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 36ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 38ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 71ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 40ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 39ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 72ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 67ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 41ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 69ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 2ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 39ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 38ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 72ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 37ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 41ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 66ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 67ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 39ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 65ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 35ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 37ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 66ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 39ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 42ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 72ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 2ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 71ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 41ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 69ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 39ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 43ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 75ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 2ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 39ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 45ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 70ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 66ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 39ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 66ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 35ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 37ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 66ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 2ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 38ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 40ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 69ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 70ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 41ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 70ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 40ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 40ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 73ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 40ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 38ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 71ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 2ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 69ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 2ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 41ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 71ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 40ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 2ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 44ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 70ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 39ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 41ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 73ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 69ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 38ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 67ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 2ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 38ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 41ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 67ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 37ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 2ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 38ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 67ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 2ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 72ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 41ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 72ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 2ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 80ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 50ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 84ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 73ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 39ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 87ms
+@repo/web:dev:  GET /favicon.ico?favicon.b9464329.ico 200 in 61ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 73ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 39ms
+@repo/web:dev:  GET /auth/login?redirectTo=/app 200 in 73ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 75ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 71ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 41ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 75ms
+@repo/web:dev:  GET /favicon.ico?favicon.b9464329.ico 200 in 37ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 66ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 37ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 76ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 74ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 2ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 52ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 81ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 71ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 2ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 46ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 80ms
+@repo/web:dev:  GET /favicon.ico 200 in 66ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 80ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 46ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 55ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 128ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 45ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 78ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 2ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 76ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 41ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 80ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 73ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 39ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 71ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 41ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 40ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 72ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 37ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 47ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 150ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 47ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 33ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 66ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 42ms
+@repo/web:dev: <-- GET /api
+@repo/web:dev: --> GET /api [33m404[0m 1ms
+@repo/web:dev:  GET /api 404 in 40ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 41ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 39ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 73ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 71ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 40ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 72ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 2ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 40ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 41ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 73ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 2ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 43ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 41ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 72ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 41ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 41ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 69ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 40ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 42ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 77ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 42ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 41ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 73ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 68ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 42ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 71ms
+@repo/web:dev: <-- GET /api/.env
+@repo/web:dev: --> GET /api/.env [33m404[0m 0ms
+@repo/web:dev:  GET /api/.env 404 in 40ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 38ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 39ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 74ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 37ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 2ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 37ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 2ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 38ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 69ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 35ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 38ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 68ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 36ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 41ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 82ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 2ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 40ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 71ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 74ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 36ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 38ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 72ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 38ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 39ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 74ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 37ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 43ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 68ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 38ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 38ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 69ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 37ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 39ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 72ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 2ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 40ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 72ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 74ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 39ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 41ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 73ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 40ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 42ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 71ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 39ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 39ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 70ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 40ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 41ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 77ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 2ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 40ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 40ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 71ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 2ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 70ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 2ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 43ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 75ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 39ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 44ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 77ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 38ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 44ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 71ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 2ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 49ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 39ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 71ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 39ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 40ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 72ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 37ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 40ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 71ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 67ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 41ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 73ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 40ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 2ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 41ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 69ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 35ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 2ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 38ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 70ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 36ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 39ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 68ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 38ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 37ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 70ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 36ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 39ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 69ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 2ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 69ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 40ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 67ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 41ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 40ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 67ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 40ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 41ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 76ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 36ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 39ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 70ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 37ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 42ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 70ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 40ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 40ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 70ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 66ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 41ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 71ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 41ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 39ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 69ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 2ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 35ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 37ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 65ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 2ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 35ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 39ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 69ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 37ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 42ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 76ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 35ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 37ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 65ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 2ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 66ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 2ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 40ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 68ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 38ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 40ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 70ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 38ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 39ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 71ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 2ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 38ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 40ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 69ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 40ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 39ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 68ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 2ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 40ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 42ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 70ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 71ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 42ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 74ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 41ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 37ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 71ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 2ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 40ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 40ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 71ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 40ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 40ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 69ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 2ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 39ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 43ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 74ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 2ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 40ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 40ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 73ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 69ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 44ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 71ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 40ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 41ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 67ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 36ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 37ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 68ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 2ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 37ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 40ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 70ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 37ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 39ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 76ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 2ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 39ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 40ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 71ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 2ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 69ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 43ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 71ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 38ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 41ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 70ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 42ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 39ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 65ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 37ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 38ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 68ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 39ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 41ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 71ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 2ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 39ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 2ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 40ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 70ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 69ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 41ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 69ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 41ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 41ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 71ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 2ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 37ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 42ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 74ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 2ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 42ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 43ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 75ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 42ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 48ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 77ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 2ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 39ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 2ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 44ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 148ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 67ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 37ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 66ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 37ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 35ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 72ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 39ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 39ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 80ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 39ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 40ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 72ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 39ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 41ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 70ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 40ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 42ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 75ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 70ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 42ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 70ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 2ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 41ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 44ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 79ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 39ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 44ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 72ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 41ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 40ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 67ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 2ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 40ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 40ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 70ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 40ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 42ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 76ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 72ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 42ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 71ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 79ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 44ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 78ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 48ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 69ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 72ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 2ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 75ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 2ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 42ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 88ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 74ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 40ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 75ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 2ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 43ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 41ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 70ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 41ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 41ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 75ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 72ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 41ms
+@repo/web:dev:  POST /auth/login?redirectTo=%2Fapp 200 in 75ms
+@repo/web:dev:  GET /favicon.ico 200 in 43ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 641ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 712ms
+@repo/web:dev:  GET /app 200 in 126ms
+@repo/web:dev:  GET /api/manuali/grafico 200 in 118ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 31ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 94ms
+@repo/web:dev:  GET /app/elaborati 200 in 110ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 29ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 97ms
+@repo/web:dev:  GET /app/elaborati 200 in 111ms
+@repo/web:dev:  GET /favicon.ico?favicon.b9464329.ico 200 in 43ms
+@repo/web:dev: <-- GET /api/non-existing-endpoint-12345
+@repo/web:dev: --> GET /api/non-existing-endpoint-12345 [33m404[0m 1ms
+@repo/web:dev:  GET /api/non-existing-endpoint-12345 404 in 118ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 2ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 118ms
+@repo/web:dev: <-- GET /api/non-existing-endpoint-12345
+@repo/web:dev: --> GET /api/non-existing-endpoint-12345 [33m404[0m 0ms
+@repo/web:dev:  GET /api/non-existing-endpoint-12345 404 in 39ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 72ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 64ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 85ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 2ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 45ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 41ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 95ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 105ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 93ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 186ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 2ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 118ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 190ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 68ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 37ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 42ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 63ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 74ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 140ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 125ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 48ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 77ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 67ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 65ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 139ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 50ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 86ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 43ms
+@repo/web:dev: <-- GET /api/.env
+@repo/web:dev: --> GET /api/.env [33m404[0m 0ms
+@repo/web:dev:  GET /api/.env 404 in 39ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 72ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 46ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 100ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 54ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 87ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 138ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 2ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 129ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 122ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 2ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 170ms
+@repo/web:dev:  ○ Compiling /[locale] ...
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 81ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 186ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 116ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 89ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 149ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 91ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 2ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 52ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 120ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 2ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 97ms
+@repo/web:dev:  ✓ Compiled /[locale] in 1546ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 2ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 177ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 2ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 112ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 61ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 44ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 81ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 41ms
+@repo/web:dev:  GET /api.zip 404 in 2510ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 230ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 0ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 74ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 54ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 50ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 66ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 101ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 104ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 69ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 62ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 77ms
+@repo/web:dev: <-- GET /api/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+@repo/web:dev: --> GET /api/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php [33m404[0m 0ms
+@repo/web:dev:  GET /api/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php 404 in 44ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 62ms
+@repo/web:dev: <-- GET /api/vendor/phpunit/phpunit/Util/PHP/eval-stdin.php
+@repo/web:dev: --> GET /api/vendor/phpunit/phpunit/Util/PHP/eval-stdin.php [33m404[0m 0ms
+@repo/web:dev:  GET /api/vendor/phpunit/phpunit/Util/PHP/eval-stdin.php 404 in 58ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 62ms
+@repo/web:dev: <-- GET /api/vendor/phpunit/src/Util/PHP/eval-stdin.php
+@repo/web:dev: --> GET /api/vendor/phpunit/src/Util/PHP/eval-stdin.php [33m404[0m 1ms
+@repo/web:dev:  GET /api/vendor/phpunit/src/Util/PHP/eval-stdin.php 404 in 64ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 76ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 49ms
+@repo/web:dev: <-- GET /api/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+@repo/web:dev: --> GET /api/phpunit/phpunit/src/Util/PHP/eval-stdin.php [33m404[0m 1ms
+@repo/web:dev:  GET /api/phpunit/phpunit/src/Util/PHP/eval-stdin.php 404 in 46ms
+@repo/web:dev: <-- GET /api/phpunit/src/Util/PHP/eval-stdin.php
+@repo/web:dev: --> GET /api/phpunit/src/Util/PHP/eval-stdin.php [33m404[0m 1ms
+@repo/web:dev:  GET /api/phpunit/src/Util/PHP/eval-stdin.php 404 in 62ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 50ms
+@repo/web:dev: <-- GET /api/lib/phpunit/src/Util/PHP/eval-stdin.php
+@repo/web:dev: --> GET /api/lib/phpunit/src/Util/PHP/eval-stdin.php [33m404[0m 0ms
+@repo/web:dev:  GET /api/lib/phpunit/src/Util/PHP/eval-stdin.php 404 in 55ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 43ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 77ms
+@repo/web:dev: <-- GET /api/tools/phpunit/src/Util/PHP/eval-stdin.php
+@repo/web:dev: --> GET /api/tools/phpunit/src/Util/PHP/eval-stdin.php [33m404[0m 0ms
+@repo/web:dev:  GET /api/tools/phpunit/src/Util/PHP/eval-stdin.php 404 in 69ms
+@repo/web:dev: <-- GET /api/phpunit/Util/PHP/eval-stdin.php
+@repo/web:dev: --> GET /api/phpunit/Util/PHP/eval-stdin.php [33m404[0m 0ms
+@repo/web:dev:  GET /api/phpunit/Util/PHP/eval-stdin.php 404 in 92ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 81ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 69ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 40ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 44ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 89ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 44ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 61ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 56ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 39ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 37ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 69ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 64ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 51ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 122ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 45ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 39ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 96ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 104ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 38ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 43ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 92ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 78ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 45ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 47ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 76ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 2ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 55ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 42ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 41ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 79ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 74ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 36ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 2ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 40ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 73ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 51ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 35ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 72ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 45ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 40ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 42ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 77ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 79ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 41ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 37ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 39ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 44ms
+@repo/web:dev:  GET /robots.txt.zip 404 in 170ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 2ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 138ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 104ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 105ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 2ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 43ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 39ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 36ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 2ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 42ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 74ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 36ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 39ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 40ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 39ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 70ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 39ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 37ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 45ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 72ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 39ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 41ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 39ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 2ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 71ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 77ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 80ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 79ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 724ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 804ms
+@repo/web:dev:  GET /app/elaborati 200 in 160ms
+@repo/web:dev:  GET /favicon.ico?favicon.b9464329.ico 200 in 40ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 116ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 194ms
+@repo/web:dev:  GET /app/elaborati 200 in 121ms
+@repo/web:dev:  GET /favicon.ico?favicon.b9464329.ico 200 in 36ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 729ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 807ms
+@repo/web:dev:  GET /app/elaborati 200 in 141ms
+@repo/web:dev:  GET /favicon.ico?favicon.b9464329.ico 200 in 45ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 30ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 102ms
+@repo/web:dev:  GET /app/icons 200 in 53ms
+@repo/web:dev:  GET /api/icons 200 in 108ms
+@repo/web:dev:  GET /api/icons 200 in 86ms

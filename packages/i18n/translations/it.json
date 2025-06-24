@@ -1,0 +1,68 @@
+{
+	"nav": {
+		"start": "Start",
+		"aiChatbot": "AI Chatbot",
+		"manual": "Manuale",
+		"template": "Template",
+		"istruzioni-manuale": "Istruzioni Manuale",
+		"sezioni-manuale": "Sezioni Manuale"
+	},
+	"istruzioni-manuale": {
+		"title": "Istruzioni Manuale",
+		"description": "Guida completa all'utilizzo del sistema",
+		"form": {
+			"title": "Carica Documento",
+			"fileLabel": "File",
+			"filePlaceholder": "Seleziona un file...",
+			"fileSelected": "File selezionato: {name}",
+			"promptLabel": "Prompt",
+			"promptPlaceholder": "Inserisci qui il tuo prompt...",
+			"submit": "Analizza",
+			"help": {
+				"title": "Istruzioni per l'analisi del manuale",
+				"content": "Identifica le 9 sezioni obbligatorie:\n   - Cover\n   - Panoramica generale\n   - Installazione/Configurazione\n   - Utilizzo/Operatività\n   - Manutenzione/Gestione\n   - Risoluzione dei problemi\n   - Sicurezza\n   - Appendici\n   - Note legali"
+			}
+		}
+	},
+	"manual": {
+		"title": "Istruzioni Manuale",
+		"description": "Guida completa all'utilizzo del sistema",
+		"form": {
+			"title": "Carica Documento",
+			"fileLabel": "File",
+			"filePlaceholder": "Seleziona un file...",
+			"promptLabel": "Prompt",
+			"promptPlaceholder": "Inserisci qui il tuo prompt...",
+			"submit": "Analizza"
+		}
+	},
+	"saas": {
+		"template": {
+			"title": "Template",
+			"description": "Crea e gestisci i tuoi template",
+			"form": {
+				"title": "Crea Template",
+				"name": "Nome Template",
+				"logo": "Logo",
+				"titleFont": "Font Titolo",
+				"titleSize": "Dimensione Titolo",
+				"titleColor": "Colore Titolo",
+				"subtitleFont": "Font Sottotitolo",
+				"subtitleSize": "Dimensione Sottotitolo",
+				"subtitleColor": "Colore Sottotitolo",
+				"paragraphFont": "Font Paragrafo",
+				"paragraphSize": "Dimensione Paragrafo",
+				"paragraphColor": "Colore Paragrafo",
+				"preview": {
+					"title": "Anteprima",
+					"subtitle": "Questo è un esempio di sottotitolo",
+					"paragraph": "Questo è un esempio di testo del paragrafo che mostra come apparirà il contenuto con il font, la dimensione e il colore selezionati."
+				},
+				"submit": "Salva Template",
+				"loading": "Salvataggio in corso...",
+				"success": "Template salvato con successo!",
+				"error": "Si è verificato un errore durante il salvataggio del template."
+			}
+		}
+	}
+}

@@ -1,0 +1,171 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+	--fd-banner-height: 4.5rem;
+}
+
+@layer base {
+	* {
+		@apply border-border;
+	}
+	h1, h2, h3, h4, h5, h6 {
+		@apply my-0;
+	}
+}
+
+@layer utilities {
+	.no-scrollbar::-webkit-scrollbar {
+		display: none;
+	}
+
+	.no-scrollbar {
+		-ms-overflow-style: none;
+		scrollbar-width: none;
+	}
+}
+
+pre.shiki {
+	@apply mb-4 rounded-lg p-6;
+}
+
+#nd-sidebar {
+	@apply !bg-card top-[4.5rem] md:!h-[calc(100dvh-4.5rem)];
+
+	button[data-search-full] {
+		@apply bg-transparent;
+	}
+}
+
+#nd-page .prose {
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		a {
+			@apply !no-underline;
+		}
+	}
+}
+
+div[role="tablist"].bg-secondary {
+	@apply !bg-muted;
+}
+
+input[cmdk-input] {
+	@apply border-none focus-visible:ring-0;
+}
+
+/* Miglioramento blocchi alert legacy (div con background-color e border tipici) */
+div[style*="background-color:#fff3cd"],
+div[style*="background-color: #fff3cd"],
+div[style*="background-color:#ffeaea"],
+div[style*="background-color: #ffeaea"],
+div[style*="background-color:#f9e2e2"],
+div[style*="background-color: #f9e2e2"],
+div[style*="background-color:#FFF3CD"],
+div[style*="background-color: #FFF3CD"],
+div[style*="background-color:#FFEAEA"],
+div[style*="background-color: #FFEAEA"] {
+	border-radius: 0.5rem !important;
+	border-width: 2px !important;
+	border-style: solid !important;
+	padding: 1.25rem !important;
+	margin: 1.5rem 0 !important;
+	font-size: 1rem !important;
+	font-weight: 500 !important;
+	box-shadow: 0 2px 8px 0 rgba(0,0,0,0.04);
+	display: flex;
+	align-items: flex-start;
+	gap: 0.75rem;
+}
+
+/* Migliora la visibilità del testo strong all'interno */
+div[style*="background-color:#fff3cd"] strong,
+div[style*="background-color: #fff3cd"] strong,
+div[style*="background-color:#ffeaea"] strong,
+div[style*="background-color: #ffeaea"] strong,
+div[style*="background-color:#f9e2e2"] strong,
+div[style*="background-color: #f9e2e2"] strong,
+div[style*="background-color:#FFF3CD"] strong,
+div[style*="background-color: #FFF3CD"] strong,
+div[style*="background-color:#FFEAEA"] strong,
+div[style*="background-color: #FFEAEA"] strong {
+	font-size: 1.1em;
+	color: #b45309;
+	margin-right: 0.5em;
+}
+
+/* Stampa: mantieni questi stili anche in print */
+@media print {
+	div[style*="background-color:#fff3cd"],
+	div[style*="background-color: #fff3cd"],
+	div[style*="background-color:#ffeaea"],
+	div[style*="background-color: #ffeaea"],
+	div[style*="background-color:#f9e2e2"],
+	div[style*="background-color: #f9e2e2"],
+	div[style*="background-color:#FFF3CD"],
+	div[style*="background-color: #FFF3CD"],
+	div[style*="background-color:#FFEAEA"],
+	div[style*="background-color: #FFEAEA"] {
+		border-radius: 0.5rem !important;
+		border-width: 2px !important;
+		border-style: solid !important;
+		padding: 1.25rem !important;
+		margin: 1.5rem 0 !important;
+		font-size: 1rem !important;
+		font-weight: 500 !important;
+		box-shadow: none;
+		background-clip: padding-box;
+		color: #222 !important;
+	}
+	div[style*="background-color:#fff3cd"] strong,
+	div[style*="background-color: #fff3cd"] strong,
+	div[style*="background-color:#ffeaea"] strong,
+	div[style*="background-color: #ffeaea"] strong,
+	div[style*="background-color:#f9e2e2"] strong,
+	div[style*="background-color: #f9e2e2"] strong,
+	div[style*="background-color:#FFF3CD"] strong,
+	div[style*="background-color: #FFF3CD"] strong,
+	div[style*="background-color:#FFEAEA"] strong,
+	div[style*="background-color: #FFEAEA"] strong {
+		color: #b45309 !important;
+	}
+}
+
+div[style*="background-color:#fff3cd"]::before,
+div[style*="background-color: #fff3cd"]::before,
+div[style*="background-color:#ffeaea"]::before,
+div[style*="background-color: #ffeaea"]::before,
+div[style*="background-color:#f9e2e2"]::before,
+div[style*="background-color: #f9e2e2"]::before,
+div[style*="background-color:#FFF3CD"]::before,
+div[style*="background-color: #FFF3CD"]::before,
+div[style*="background-color:#FFEAEA"]::before,
+div[style*="background-color: #FFEAEA"]::before {
+	content: '⚠️ ';
+	font-size: 1.2em;
+	margin-right: 0.5em;
+	line-height: 1;
+}
+
+@media print {
+	div[style*="background-color:#fff3cd"]::before,
+	div[style*="background-color: #fff3cd"]::before,
+	div[style*="background-color:#ffeaea"]::before,
+	div[style*="background-color: #ffeaea"]::before,
+	div[style*="background-color:#f9e2e2"]::before,
+	div[style*="background-color: #f9e2e2"]::before,
+	div[style*="background-color:#FFF3CD"]::before,
+	div[style*="background-color: #FFF3CD"]::before,
+	div[style*="background-color:#FFEAEA"]::before,
+	div[style*="background-color: #FFEAEA"]::before {
+		content: '⚠️ ';
+		font-size: 1.2em;
+		margin-right: 0.5em;
+		line-height: 1;
+	}
+}
