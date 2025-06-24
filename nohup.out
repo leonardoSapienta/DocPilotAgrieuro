@@ -2989,3 +2989,90 @@ turbo 2.3.3
 @repo/web:dev:  GET /app/icons 200 in 53ms
 @repo/web:dev:  GET /api/icons 200 in 108ms
 @repo/web:dev:  GET /api/icons 200 in 86ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 762ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 834ms
+@repo/web:dev:  GET /app 200 in 111ms
+@repo/web:dev:  GET /api/manuali/grafico 200 in 115ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 29ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 98ms
+@repo/web:dev:  GET /app/elaborati 200 in 101ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 30ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 101ms
+@repo/web:dev:  GET /app/elaborati 200 in 109ms
+@repo/web:dev:  GET /favicon.ico?favicon.b9464329.ico 200 in 44ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 31ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 101ms
+@repo/web:dev:  GET /app/icons 200 in 44ms
+@repo/web:dev:  GET /api/icons 200 in 99ms
+@repo/web:dev:  GET /api/icons 200 in 78ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 54ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 125ms
+@repo/web:dev:  GET /app/icons 200 in 107ms
+@repo/web:dev:  GET /favicon.ico?favicon.b9464329.ico 200 in 59ms
+@repo/web:dev:  GET /api/icons 200 in 109ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 29ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 100ms
+@repo/web:dev:  GET /app/icons 200 in 100ms
+@repo/web:dev:  GET /favicon.ico?favicon.b9464329.ico 200 in 59ms
+@repo/web:dev:  GET /api/icons 200 in 104ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 826ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 900ms
+@repo/web:dev:  GET /app/icons 200 in 107ms
+@repo/web:dev:  GET /favicon.ico?favicon.b9464329.ico 200 in 58ms
+@repo/web:dev:  GET /api/icons 200 in 138ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 2ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 77ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 41ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 114ms
+@repo/web:dev:  GET /app/icons 200 in 108ms
+@repo/web:dev:  GET /favicon.ico?favicon.b9464329.ico 200 in 49ms
+@repo/web:dev:  GET /api/icons 200 in 85ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 29ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 97ms
+@repo/web:dev:  GET /app 200 in 81ms
+@repo/web:dev:  GET /api/manuali/grafico 200 in 112ms
+@repo/web:dev:  GET /api/manuali/grafico 200 in 61ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 172ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 247ms
+@repo/web:dev:  GET /app 200 in 108ms
+@repo/web:dev:  GET /favicon.ico?favicon.b9464329.ico 200 in 74ms
+@repo/web:dev:  GET /api/manuali/grafico 200 in 117ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 3ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 79ms
+@repo/web:dev:  GET /auth/login?redirectTo=%2Fapp 200 in 69ms
+@repo/web:dev: <-- GET /api/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+@repo/web:dev: --> GET /api/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php [33m404[0m 0ms
+@repo/web:dev:  GET /api/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php 404 in 74ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 1ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 76ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 2ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 67ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 802ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 887ms
+@repo/web:dev:  GET /app/elaborati 200 in 138ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 45ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 123ms
+@repo/web:dev:  GET /app/elaborati 200 in 116ms
+@repo/web:dev:  GET /favicon.ico?favicon.b9464329.ico 200 in 55ms
+@repo/web:dev: <-- GET /api/auth/get-session
+@repo/web:dev: --> GET /api/auth/get-session [32m200[0m 29ms
+@repo/web:dev:  GET /api/auth/get-session?disableCookieCache=true 200 in 106ms
+@repo/web:dev:  GET /app/icons 200 in 52ms
+@repo/web:dev:  GET /api/icons 200 in 108ms
+@repo/web:dev:  GET /api/icons 200 in 104ms
