@@ -54,7 +54,7 @@ export const useAnalyzeManualMutation = () => {
 				const timeoutId = setTimeout(() => controller.abort(), 14400000);
 
 				// Iniziamo l'analisi
-				const response = await fetch(`${FLASK_URL}/api/process-pdf`, {
+				const response = await fetch(`${FLASK_URL}/flask-api/process-pdf`, {
 					method: "POST",
 					body: formData,
 					signal: controller.signal,

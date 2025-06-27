@@ -141,7 +141,7 @@ export default function ManualInstructionsPage() {
 				return;
 			}
 
-			const flaskUrl = `${flaskBaseUrl}/api/convert-pdf-to-text`;
+			const flaskUrl = `${flaskBaseUrl}/flask-api/convert-pdf-to-text`;
 			console.log("URL completo del servizio Flask:", flaskUrl);
 
 			try {

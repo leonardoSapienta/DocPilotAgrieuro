@@ -592,7 +592,7 @@ export function TranslationClient() {
 
 			// Chiama l'API di traduzione
 			const translationResponse = await fetch(
-				"http://localhost:5000/api/traduzioni",
+				`${process.env.NEXT_PUBLIC_SITE_FLASK}/flask-api/traduzioni`,
 				{
 					method: "POST",
 					headers: {
@@ -2151,25 +2151,28 @@ export function TranslationClient() {
 					? "application/pdf"
 					: "application/vnd.openxmlformats-officedocument.wordprocessingml.document";
 			const dbField = exportFormat === "pdf" ? "pdf" : "docx";
-			const response = await fetch("http://localhost:5000/api/stampaPdf", {
-				method: "POST",
-				headers: {
-					"Content-Type": "application/json",
-					"Accept": contentType,
+			const response = await fetch(
+				`${process.env.NEXT_PUBLIC_SITE_FLASK}/flask-api/stampaPdf`,
+				{
+					method: "POST",
+					headers: {
+						"Content-Type": "application/json",
+						"Accept": contentType,
+					},
+					body: JSON.stringify({
+						html_content: html,
+						nomemanuale: `${manualTitle}_multilingua`,
+						format: exportFormat,
+						template: {
+							font_title: template.font_title,
+							font_paragraph: template.font_paragraph,
+							color: template.color,
+							logo_path: template.logo_path,
+							logo_footer: template.logo_footer
+						}
+					}),
 				},
-				body: JSON.stringify({
-					html_content: html,
-					nomemanuale: `${manualTitle}_multilingua`,
-					format: exportFormat,
-					template: {
-						font_title: template.font_title,
-						font_paragraph: template.font_paragraph,
-						color: template.color,
-						logo_path: template.logo_path,
-						logo_footer: template.logo_footer
-					}
-				}),
-			});
+			);
 			if (!response.ok) {
 				const errorData = await response.json().catch(() => ({}));
 				console.error("Errore generazione file:", errorData);

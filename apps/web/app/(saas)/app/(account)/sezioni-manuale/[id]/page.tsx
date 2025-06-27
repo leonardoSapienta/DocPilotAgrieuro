@@ -178,7 +178,7 @@ export default function SectionPage() {
 			formData.append("filename", manualName);
 
 			const response = await fetch(
-				`${process.env.NEXT_PUBLIC_SITE_FLASK}/api/estrai-sezione`,
+				`${process.env.NEXT_PUBLIC_SITE_FLASK}/flask-api/estrai-sezione`,
 				{
 					method: "POST",
 					body: formData,

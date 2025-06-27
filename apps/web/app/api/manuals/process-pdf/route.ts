@@ -2,7 +2,7 @@ import { getSession } from "@saas/auth/lib/server";
 import { NextResponse } from "next/server";
 
 const PYTHON_BACKEND_URL =
-	process.env.PYTHON_BACKEND_URL || "http://localhost:5000";
+	process.env.NEXT_PUBLIC_SITE_FLASK || "http://localhost:5000";
 
 export async function POST(req: Request) {
 	try {
@@ -42,7 +42,7 @@ export async function POST(req: Request) {
 		}
 
 		// Inoltra la richiesta al backend Python
-		const response = await fetch(`${PYTHON_BACKEND_URL}/api/process-pdf`, {
+		const response = await fetch(`${PYTHON_BACKEND_URL}/flask-api/process-pdf`, {
 			method: "POST",
 			body: formData,
 			// Timeout di 40 minuti (2400000 millisecondi)
