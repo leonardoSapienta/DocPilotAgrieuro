@@ -15,7 +15,7 @@ export default async function ProcessingPage() {
 	// For instance, fetching initial data from API or database
 
 	return (
-		<>
+		<div className="flex flex-col w-full min-h-screen mx-[5px]">
 			<PageHeader
 				title={t("manual.processing.title")}
 				subtitle={t("manual.processing.description")}
@@ -23,7 +23,9 @@ export default async function ProcessingPage() {
 
 			<StepIndicator />
 
-			<ProcessingClient />
-		</>
+			<div className="flex-1 min-h-0 flex flex-col px-[5px] overflow-x-hidden min-w-0 box-border">
+				<ProcessingClient />
+			</div>
+		</div>
 	);
 }

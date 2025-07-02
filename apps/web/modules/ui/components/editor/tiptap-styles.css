@@ -154,6 +154,8 @@
 .tiptap-editor .ProseMirror {
   min-height: 100px;
   caret-color: black;
+  max-width: 100%;
+  overflow-x: auto;
 }
 
 .dark .tiptap-editor .ProseMirror {

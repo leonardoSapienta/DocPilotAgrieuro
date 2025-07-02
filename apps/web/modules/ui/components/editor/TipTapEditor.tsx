@@ -77,6 +77,7 @@ export default function TipTapEditor({
 	const [activeItem, setActiveItem] = useState<ActiveItemType | null>(null);
 	const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 	const [currentContent, setCurrentContent] = useState(content);
+	const [isClient, setIsClient] = useState(false);
 
 	// Refs
 	const contentRef = useRef<HTMLDivElement>(null);
@@ -127,7 +128,9 @@ export default function TipTapEditor({
 	// Update editor content when content prop changes
 	useEffect(() => {
 		if (editor && content !== editor.getHTML()) {
-			editor.commands.setContent(content);
+			queueMicrotask(() => {
+				editor.commands.setContent(content);
+			});
 		}
 	}, [content, editor]);
 
@@ -438,38 +441,38 @@ export default function TipTapEditor({
 	);
 
 	const renderEditMode = () => (
-		<DndContext
-			sensors={sensors}
-			onDragStart={handleDragStart}
-			onDragMove={() => {}} // Handled by mouse move listener
-			onDragEnd={handleDragEnd}
-		>
-			<div className="flex flex-1">
-				<EditorSidebar
-					selectedSectionTitle={selectedSectionTitle}
-					selectedSectionOriginalContent={
-						selectedSectionOriginalContent
-					}
-				/>
-				<div
-					ref={contentRef}
-					className={cn(
-						"flex-1 w-full p-5 relative",
-						isDragging && isMouseOverEditor() && "bg-primary/5",
-					)}
-				>
-					{isDragging && isMouseOverEditor() && renderDropIndicator()}
-					<EditorContent
-						editor={editor}
-						className="outline-none focus:outline-none w-full h-full tiptap-editor cursor-text"
+		isClient ? (
+			<DndContext
+				sensors={sensors}
+				onDragStart={handleDragStart}
+				onDragMove={() => {}} // Handled by mouse move listener
+				onDragEnd={handleDragEnd}
+			>
+				<div className="flex flex-1 min-w-0">
+					<EditorSidebar
+						selectedSectionTitle={selectedSectionTitle}
+						selectedSectionOriginalContent={selectedSectionOriginalContent}
 					/>
+					<div
+						ref={contentRef}
+						className={cn(
+							"flex-1 w-full min-w-0 max-w-full p-2 sm:p-4 relative",
+							isDragging && isMouseOverEditor() && "bg-primary/5",
+						)}
+					>
+						{isDragging && isMouseOverEditor() && renderDropIndicator()}
+						<EditorContent
+							editor={editor}
+							className="outline-none focus:outline-none w-full h-full tiptap-editor cursor-text"
+						/>
+					</div>
+					{/* Drag overlay to show component following cursor */}
+					<DragOverlay>
+						{isDragging && renderDragOverlayContent()}
+					</DragOverlay>
 				</div>
-				{/* Drag overlay to show component following cursor */}
-				<DragOverlay>
-					{isDragging && renderDragOverlayContent()}
-				</DragOverlay>
-			</div>
-		</DndContext>
+			</DndContext>
+		) : null
 	);
 
 	const renderPreviewMode = () => {
@@ -483,16 +486,22 @@ export default function TipTapEditor({
 		);
 	};
 
+	useEffect(() => {
+		setIsClient(true);
+	}, []);
+
 	return (
-		<div
-			className={cn(
-				"flex flex-col rounded-lg border shadow-sm bg-white",
-				className,
-			)}
-		>
-			{renderEditorHeader()}
-			<div className="flex flex-1">
-				{isEditMode ? renderEditMode() : renderPreviewMode()}
+		<div className="w-full min-w-0 max-w-full">
+			<div
+				className={cn(
+					"flex flex-col rounded-lg border shadow-sm bg-white",
+					className,
+				)}
+			>
+				{renderEditorHeader()}
+				<div className="flex flex-1">
+					{isEditMode ? renderEditMode() : renderPreviewMode()}
+				</div>
 			</div>
 		</div>
 	);

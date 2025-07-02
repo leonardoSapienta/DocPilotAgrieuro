@@ -27,7 +27,7 @@ import {
 import { Input } from "@ui/components/input";
 import { Label } from "@ui/components/label";
 import { useToast } from "@ui/hooks/use-toast";
-import { Plus, Trash2 } from "lucide-react";
+import { Plus, Trash2, Pencil } from "lucide-react";
 import { useEffect, useState } from "react";
 
 interface Icon {
@@ -50,6 +50,7 @@ export default function IconsPage() {
 	const [isLoading, setIsLoading] = useState(false);
 	const [icons, setIcons] = useState<Icon[]>([]);
 	const [iconToDelete, setIconToDelete] = useState<Icon | null>(null);
+	const [iconToEdit, setIconToEdit] = useState<Icon | null>(null);
 	const [formData, setFormData] = useState<IconFormData>({
 		name: "",
 		description: "",
@@ -259,14 +260,26 @@ export default function IconsPage() {
 			<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
 				{icons.map((icon) => (
 					<Card key={icon.id} className="relative">
-						<Button
-							variant="ghost"
-							size="icon"
-							className="absolute top-2 right-2 text-destructive hover:text-destructive/90"
-							onClick={() => setIconToDelete(icon)}
-						>
-							<Trash2 className="h-4 w-4" />
-						</Button>
+						<div className="absolute top-2 right-2 flex gap-2">
+							<Button
+								variant="ghost"
+								size="icon"
+								className="text-muted-foreground hover:text-primary"
+								onClick={() => setIconToEdit(icon)}
+								aria-label="Modifica icona"
+							>
+								<Pencil className="h-4 w-4" />
+							</Button>
+							<Button
+								variant="ghost"
+								size="icon"
+								className="text-destructive hover:text-destructive/90"
+								onClick={() => setIconToDelete(icon)}
+								aria-label="Elimina icona"
+							>
+								<Trash2 className="h-4 w-4" />
+							</Button>
+						</div>
 						<CardHeader>
 							<CardTitle>{icon.nome}</CardTitle>
 							{icon.descrizione && (

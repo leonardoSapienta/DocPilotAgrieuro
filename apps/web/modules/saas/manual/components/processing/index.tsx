@@ -731,273 +731,140 @@ export function ProcessingClient() {
 		}
 	};
 
+	const editorMaxWidthClass = isExamplePanelOpen ? 'max-w-[calc(100vw-400px)]' : 'w-full';
+
 	return (
-		<div className="w-full p-2 md:p-4 max-w-[2400px] mx-auto">
-			<div className="space-y-4">
-				<Card>
-					<CardContent className="p-4 sm:p-6">
-						<div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4">
-							<div className="flex flex-col sm:flex-row gap-4 w-full lg:w-auto">
-								<SectionSelector
-									sections={sections}
-									selectedSection={selectedSection}
-									onSelectSection={handleSectionSelect}
-									onDeleteSection={handleDeleteSection}
-								/>
-
-								<div className="w-full sm:w-64">
-									<select
-										className="w-full h-10 px-3 bg-white border border-gray-200 rounded-md shadow-sm focus:border-gray-300 focus:ring focus:ring-gray-200 focus:ring-opacity-50"
-										value={selectedTemplate}
-										onChange={(e) =>
-											handleTemplateChange(e.target.value)
-										}
-									>
-										<option value="">
-											-- Scegli un Template --
-										</option>
-										{templates.map((template) => (
-											<option
-												key={template.id}
-												value={template.id}
-											>
-												{template.name}
-											</option>
-										))}
-									</select>
-									{!selectedTemplate && (
-										<p className="text-xs text-amber-600 mt-1">
-											Seleziona un template per continuare
-										</p>
-									)}
-								</div>
+		<div className="flex flex-row w-full h-full min-w-0 max-w-full overflow-x-hidden">
+			<div className="flex-1 min-w-0 max-w-full flex flex-col overflow-x-hidden">
+				{/* Toolbar sopra */}
+				<div className="mb-2 w-full max-w-full min-w-0 overflow-x-hidden">
+					<div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4 min-w-0 max-w-full">
+						<div className="flex flex-col sm:flex-row gap-4 w-full lg:w-auto items-center min-w-0 max-w-full">
+							<SectionSelector
+								sections={sections}
+								selectedSection={selectedSection}
+								onSelectSection={handleSectionSelect}
+								onDeleteSection={handleDeleteSection}
+							/>
+							<div className="flex items-center gap-2 min-w-0 max-w-full">
+								<Button
+									variant="outline"
+									size="sm"
+									onClick={() => setIsExamplePanelOpen(true)}
+									className="flex items-center gap-2"
+								>
+									<InfoIcon className="h-4 w-4" />
+									<span>Mostra Example Manual</span>
+								</Button>
+								<Button
+									variant="outline"
+									size="sm"
+									onClick={() => handleDeleteSection(selectedSection || '')}
+									className="text-red-600 hover:text-red-700 hover:bg-red-50"
+								>
+									Elimina Sezione
+								</Button>
 							</div>
-
-							<div className="w-full lg:w-auto flex justify-end mt-3 lg:mt-0">
-								<div className="flex items-center gap-3 w-full sm:w-auto">
-									<Button
-										className="h-10 px-4 flex-1 sm:flex-none"
-										onClick={handleSave}
-										disabled={!selectedTemplate}
-									>
-										Analizza Lingue
-									</Button>
-								</div>
+							<div className="w-full sm:w-64 min-w-0 max-w-full">
+								<select
+									className="w-full h-10 px-3 bg-white border border-gray-200 rounded-md shadow-sm focus:border-gray-300 focus:ring focus:ring-gray-200 focus:ring-opacity-50"
+									value={selectedTemplate}
+									onChange={(e) => handleTemplateChange(e.target.value)}
+								>
+									<option value="">
+										-- Scegli un Template --
+									</option>
+									{templates.map((template) => (
+										<option
+											key={template.id}
+											value={template.id}
+										>
+											{template.name}
+										</option>
+									))}
+								</select>
 							</div>
 						</div>
-					</CardContent>
-				</Card>
 
-				<Card>
-					<CardContent className="p-6">
-						{/* Doppia colonna in stampa SOLO nella prima pagina inglese */}
-						{language === "English" && sections[0] && (
-							<div className="hidden print:block">
-								<ManualDoubleColumnSectionPrint
-									image={sections[0]?.images?.[0]?.url}
-									content={sections[0]?.doubleColumnContent}
-								/>
+						<div className="w-full lg:w-auto flex justify-end mt-3 lg:mt-0 min-w-0 max-w-full">
+							<div className="flex items-center gap-3 w-full sm:w-auto min-w-0 max-w-full">
+								<Button
+									className="h-10 px-4 flex-1 sm:flex-none"
+									onClick={handleSave}
+									disabled={!selectedTemplate}
+								>
+									Analizza Lingue
+								</Button>
 							</div>
-						)}
-						{/* Doppia colonna interattiva solo in editor inglese, prima sezione */}
-						{language === "English" && selectedSection === sections[0]?.title && false && (
-							<ManualDoubleColumnSection
-								initialImage={sections[0]?.doubleColumnImage}
-								initialContent={sections[0]?.doubleColumnContent}
-								onChange={({ image, content }) => {
-									setSections((prev) =>
-										prev.map((section, idx) =>
-											idx === 0
-												? {
-													...section,
-													doubleColumnContent: content,
-													doubleColumnImage: image,
-												}
-												: section
-										)
-									);
-								}}
-							/>
-						)}
-						{selectedSection ? (
-							<div>
-								{/* Doppia colonna SOLO nella prima sezione inglese */}
-								{language === "English" && sections[0]?.title === selectedSection && false && (
-									<ManualDoubleColumnSection
-										initialImage={sections[0]?.doubleColumnImage}
-										initialContent={sections[0]?.doubleColumnContent}
-										onChange={({ image, content }) => {
-											setSections((prev) =>
-												prev.map((section, idx) =>
-													idx === 0
-														? {
-																...section,
-																doubleColumnContent: content,
-																doubleColumnImage: image,
-														  }
-														: section
-												)
-											);
-										}}
-									/>
-								)}
-								<div className="flex items-center justify-between mb-6">
-									<div className="flex items-center gap-3">
-										<div className="flex-shrink-0">
-											{selectedSectionData?.isMissing ? (
-												<AlertTriangleIcon className="h-5 w-5 text-red-500" />
-											) : selectedSectionData?.hasContent ? (
-												<CheckCircleIcon className="h-5 w-5 text-green-500" />
-											) : (
-												<InfoIcon className="h-5 w-5 text-amber-500" />
-											)}
-										</div>
-										<div>
-											<h2 className="text-2xl font-semibold">{selectedSection}</h2>
-											<p className="text-gray-500 mt-1">
-												{selectedSectionData?.isMissing
-													? "Questa sezione è mancante nel documento originale."
-													: selectedSectionData?.hasContent
-														? "Questa sezione contiene contenuto."
-														: "Questa sezione non contiene contenuto."}
-											</p>
-										</div>
-									</div>
-									<div className="flex items-center gap-2">
-										{selectedSectionData?.example_html && (
-											<Button
-												variant="outline"
-												size="sm"
-												onClick={() => setIsExamplePanelOpen(true)}
-												className="flex items-center gap-2"
-											>
-												<InfoIcon className="h-4 w-4" />
-												<span>Mostra Example Manual</span>
-											</Button>
-										)}
-										<Button
-											variant="outline"
-											size="sm"
-											onClick={() => handleDeleteSection(selectedSection)}
-											className="text-red-600 hover:text-red-700 hover:bg-red-50"
-										>
-											Elimina Sezione
-										</Button>
-									</div>
-								</div>
-
-								{selectedSectionData?.missing_information && (
-									<div className="mb-6 p-4 bg-yellow-50 border border-yellow-200 rounded-lg">
-										<h3 className="text-sm font-medium text-yellow-800 mb-2">
-											Informazioni Mancanti
-										</h3>
-										<p className="text-sm text-yellow-700">
-											{selectedSectionData.missing_information}
-										</p>
-									</div>
-								)}
-
-								<div className="mt-6 min-h-[300px] flex flex-col">
-									{selectedSectionData && (
-										<div
-											key={`editor-container-${selectedSection}`}
-										>
-											<TipTapEditor
-												content={
-													selectedSectionData.content ||
-													""
-												}
-												onChange={
-													handleEditorContentChange
-												}
-												onImageAdd={() =>
-													setIsImageDialogOpen(true)
-												}
-												sectionImages={
-													selectedSectionData.images ||
-													[]
-												}
-												imageRefs={
-													selectedSectionData.imageRefs ||
-													[]
-												}
-												selectedSectionTitle={
-													selectedSection
-												}
-												selectedSectionOriginalContent={
-													selectedSectionData.content ||
-													""
-												}
-												exampleContent={
-													selectedSectionData.example_html
-												}
+						</div>
+					</div>
+				</div>
+				{/* Editor + immagini, scrollabile verticalmente */}
+				<div className={`flex-1 min-w-0 ${editorMaxWidthClass} flex flex-col h-0 max-w-full overflow-x-hidden`}>
+					<div className={`flex-1 min-w-0 ${editorMaxWidthClass} flex flex-col overflow-y-auto max-w-full overflow-x-hidden`}>
+						<TipTapEditor className={`min-w-0 w-full h-full max-w-full p-2`}
+							content={selectedSectionData?.content || ""}
+							onChange={handleEditorContentChange}
+							onImageAdd={() => setIsImageDialogOpen(true)}
+							sectionImages={selectedSectionData?.images || []}
+							imageRefs={selectedSectionData?.imageRefs || []}
+							selectedSectionTitle={selectedSection || ''}
+							selectedSectionOriginalContent={selectedSectionData?.content || ''}
+							exampleContent={selectedSectionData?.example_html}
+						/>
+						{/* Immagini associate */}
+						{selectedSectionData?.images && selectedSectionData.images.length > 0 && (
+							<div className="mt-6 w-full max-w-full overflow-x-auto">
+								<h3 className="text-sm font-medium text-gray-500 mb-3">
+									Immagini Associate
+								</h3>
+								<div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 w-full max-w-full">
+									{selectedSectionData.images.map((img, idx) => (
+										<div key={idx} className="border rounded-md overflow-hidden w-full max-w-full">
+											<img
+												src={img.url}
+												alt={`Immagine ${idx + 1}`}
+												className="w-full h-32 object-cover max-w-full"
 											/>
 										</div>
-									)}
+									))}
 								</div>
-
-								{selectedSectionData?.images &&
-									selectedSectionData.images.length > 0 && (
-										<div className="mt-6">
-											<h3 className="text-sm font-medium text-gray-500 mb-3">
-												Immagini Associate
-											</h3>
-											<div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-												{selectedSectionData.images.map(
-													(img, idx) => (
-														<div
-															key={idx}
-															className="border rounded-md overflow-hidden"
-														>
-															<img
-																src={img.url}
-																alt={`Immagine ${idx + 1}`}
-																className="w-full h-32 object-cover"
-															/>
-														</div>
-													),
-												)}
-											</div>
-										</div>
-									)}
 							</div>
-						) : (
-							<EmptyStateSection
-								isAfterDeletion={isAfterDeletion}
-							/>
 						)}
-					</CardContent>
-				</Card>
+					</div>
+				</div>
+				{/* Dialog/modal per mobile (opzionale) */}
+				<AddSectionDialog
+					isOpen={isAddSectionModalOpen}
+					onClose={() => setIsAddSectionModalOpen(false)}
+					onAddSection={handleAddSection}
+					params={{ id: manualId || '' }}
+				/>
+				<DeleteConfirmDialog
+					isOpen={isDeleteConfirmOpen}
+					onClose={() => setIsDeleteConfirmOpen(false)}
+					onConfirm={confirmDelete}
+					sectionName={sectionToDelete}
+				/>
+				<ImageDialog
+					isOpen={isImageDialogOpen}
+					onClose={() => setIsImageDialogOpen(false)}
+					onImageSelect={handleImageSelect}
+					sectionImages={selectedSectionData?.images || []}
+					imageRefs={selectedSectionData?.imageRefs || []}
+					manualId={manualId || undefined}
+				/>
 			</div>
-
-			<AddSectionDialog
-				isOpen={isAddSectionModalOpen}
-				onClose={() => setIsAddSectionModalOpen(false)}
-				onAddSection={handleAddSection}
-				params={{ id: manualId || '' }}
-			/>
-
-			<DeleteConfirmDialog
-				isOpen={isDeleteConfirmOpen}
-				onClose={() => setIsDeleteConfirmOpen(false)}
-				onConfirm={confirmDelete}
-				sectionName={sectionToDelete}
-			/>
-
-			<ImageDialog
-				isOpen={isImageDialogOpen}
-				onClose={() => setIsImageDialogOpen(false)}
-				onImageSelect={handleImageSelect}
-				sectionImages={selectedSectionData?.images || []}
-				imageRefs={selectedSectionData?.imageRefs || []}
-				manualId={manualId || undefined}
-			/>
-
-			<ExampleContentPanel
-				isOpen={isExamplePanelOpen}
-				onClose={() => setIsExamplePanelOpen(false)}
-				exampleHtml={selectedSectionData?.example_html}
-			/>
+			{/* Colonna manuale d'esempio sempre a destra */}
+			{isExamplePanelOpen && (
+				<aside className="hidden lg:block w-[200px] lg:w-[400px] max-w-full min-w-0 h-full border-l bg-muted p-0 overflow-y-auto overflow-x-hidden">
+					<ExampleContentPanel
+						isOpen={true}
+						onClose={() => setIsExamplePanelOpen(false)}
+						exampleHtml={selectedSectionData?.example_html}
+					/>
+				</aside>
+			)}
 		</div>
 	);
 }

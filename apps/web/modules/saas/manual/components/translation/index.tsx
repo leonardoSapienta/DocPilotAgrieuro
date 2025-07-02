@@ -138,8 +138,9 @@ function createMultiFormatImageFallback(
 	// Tenta diversi formati di immagine (png, jpeg, gif, svg)
 	const formats = ["jpeg", "png", "gif", "svg+xml"];
 
-	// Container con ID per poter essere referenziato successivamente
-	const containerId = `${className}-container-${Math.random().toString(36).substring(2, 9)}`;
+	// Usa l'hook per generare l'id solo lato client
+	const containerId = useClientId(className);
+	if (!containerId) return ""; // Non renderizzare lato server
 
 	// Script per provare formati in sequenza e applicare quello che funziona
 	const fallbackScript = `
@@ -2627,5 +2628,13 @@ export function getOnLoadEndHandler(
 			});
 		}
 	};
+}
+
+function useClientId(prefix: string) {
+  const [id, setId] = useState<string | null>(null);
+  useEffect(() => {
+    setId(`${prefix}-container-${Math.random().toString(36).substring(2, 9)}`);
+  }, [prefix]);
+  return id;
 }
 			
